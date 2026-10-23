@@ -1,0 +1,16 @@
+{
+  "name": "lp-fee-collector",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "echo no build step",
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "viem": "^2.55.16"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

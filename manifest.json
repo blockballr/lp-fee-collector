@@ -1,0 +1,30 @@
+{
+  "name": "PancakeSwap V3 Fee Collector",
+  "category": "yield",
+  "description": "Collect accrued fees from a PancakeSwap V3 LP position.",
+  "runtime": "node20",
+  "entrypoint": "server.mjs",
+  "endpoint": "/a2a",
+  "wallet": "agent",
+  "payment": "job",
+  "deliverable": "Collected fee amounts transferred to agent wallet",
+  "release": "Transaction hash of fee collection",
+  "actions": [
+    {
+      "name": "collectFees",
+      "venue": "PancakeSwap V3",
+      "contracts": [
+        "0x46A15B0b27311cedF172AB29E4f4766fbE7F4364"
+      ],
+      "functions": [
+        "collect"
+      ],
+      "maxValueUsd": 0
+    }
+  ],
+  "env": [
+    "RPC_URL",
+    "AGENT_PRIVATE_KEY"
+  ],
+  "healthcheck": "/health"
+}
